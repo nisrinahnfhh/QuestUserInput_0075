@@ -7,6 +7,7 @@ import androidx.compose.material3.RadioButton
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.dimensionResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.LineHeightStyle
 
 @Composable
@@ -74,6 +75,18 @@ fun FormDataDiri(modifier: Modifier) {
             thickness = dimensionResource(1dp),
             color = Color.DaerkGray
         )
+        Button(
+            modifier = Modifier.f1l MaxWidth(fraction = 1f),
+            // the button is enabled when the user makes a selection
+            enabled = textALamat. isNotEmpty(),
+            onClick = {
+                nama = textNama
+                jenis = textJK
+                alamat = textAlamat
+            }
+
+        )}
+    Text(stringResource("Submit"))
 
 
 
