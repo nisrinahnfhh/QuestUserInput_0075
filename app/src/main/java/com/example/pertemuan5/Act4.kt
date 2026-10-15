@@ -1,7 +1,10 @@
 package com.example.pertemuan5
 
 import androidx.compose.foundation.selection.selectable
+import androidx.compose.material3.RadioButton
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.style.LineHeightStyle
 
 @Composable
 fun FormDataDiri(modifier: Modifier) {
@@ -32,10 +35,19 @@ fun FormDataDiri(modifier: Modifier) {
 
         Row {
             gender.forEacg { item ->
-                Row(modifier = Modifier.selectable(
+                Row(
+                    modifier = Modifier.selectable(
                     selected = textJK == item,
-                    onClick = { textJK = item}
-                ))
+                    onClick = { textJK = item }
+                ), verticalAligment = Alignment.CenterVertically) {
+                    RadioButton(
+                        selected = textJK == item,
+                        onClick = {
+                            textJK = item
+                        })
+                }
+            }
+
             }
         }
 
