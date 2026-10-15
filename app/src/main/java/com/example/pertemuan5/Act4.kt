@@ -1,5 +1,7 @@
 package com.example.pertemuan5
 
+import androidx.compose.ui.Modifier
+
 @Composable
 fun FormDataDiri(modifier: Modifier) {
 
@@ -19,7 +21,14 @@ fun FormDataDiri(modifier: Modifier) {
             value = textNama,
             singleLine = true,
             shape = MaterialTheme.shapes.large,
+            modifier = Modifier.width(250.dp),
+            label = { Text(text = "Nama Lengkap")},
+            onValueChange = {
+                textNama = it
+            }
 
         )
+
+
     }
 }
