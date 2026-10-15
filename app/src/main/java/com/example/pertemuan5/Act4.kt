@@ -1,5 +1,6 @@
 package com.example.pertemuan5
 
+import androidx.compose.foundation.selection.selectable
 import androidx.compose.ui.Modifier
 
 @Composable
@@ -28,6 +29,15 @@ fun FormDataDiri(modifier: Modifier) {
             }
 
         )
+
+        Row {
+            gender.forEacg { item ->
+                Row(modifier = Modifier.selectable(
+                    selected = textJK == item,
+                    onClick = { textJK = item}
+                ))
+            }
+        }
 
 
     }
