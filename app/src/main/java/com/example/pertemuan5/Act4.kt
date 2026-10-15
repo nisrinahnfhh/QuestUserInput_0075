@@ -1,10 +1,12 @@
 package com.example.pertemuan5
 
 import androidx.compose.foundation.selection.selectable
+import androidx.compose.material3.Divider
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.RadioButton
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.text.style.LineHeightStyle
 
 @Composable
@@ -63,6 +65,16 @@ fun FormDataDiri(modifier: Modifier) {
                 textNama = it
             }
         )
+
+        Divider(
+            mofifier = Modifier.padding(bottom =
+                dimensionResource(id = R.dimen.padding_medium), top = dimensionResource(
+                    id = R.dimen.padding_medium
+                )),
+            thickness = dimensionResource(1dp),
+            color = Color.DaerkGray
+        )
+
 
 
 
