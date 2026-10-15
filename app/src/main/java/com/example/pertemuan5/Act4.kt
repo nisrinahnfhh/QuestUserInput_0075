@@ -1,6 +1,7 @@
 package com.example.pertemuan5
 
 import androidx.compose.foundation.selection.selectable
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.RadioButton
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -45,11 +46,24 @@ fun FormDataDiri(modifier: Modifier) {
                         onClick = {
                             textJK = item
                         })
+                    Text(item)
                 }
             }
 
-            }
         }
+
+        OutlinedTextField(
+            value = textAlamat,
+            value = textNams,
+            singleLine = true,
+            shape = MaterialTheme.shapes.large,
+            modifier = Modifier.width(250.dp),
+            label = {Text(text = "Nama Lengkap")},
+            onValueChannge = {
+                textNama = it
+            }
+        )
+
 
 
     }
