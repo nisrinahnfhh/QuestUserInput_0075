@@ -1,9 +1,11 @@
 package com.example.pertemuan5
 
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.selection.selectable
 import androidx.compose.material3.Divider
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.RadioButton
+import androidx.compose.material3.Text
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.dimensionResource
@@ -103,5 +105,10 @@ color = Color.DarkGray
         modifier = Modifier
             .height(100.dp)
             .width(300.dp)
-    )
-}
+    ){
+        Column( modifier = Modifier.padding(horizontal = 5.dp, vertical = 15.dp),) {
+            Text(text = "Nama : "+nama, color = Color.White )
+            Text(text = "Gender : "+jenis, color = Color.White )
+            Text(text = "Alamat : "+alamat, color = Color.White )
+        }
+    }
